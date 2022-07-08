@@ -12,7 +12,7 @@ function cargarProducto() {
   let nombreProd = document.getElementById("form_name").value;
   let precioProd = document.getElementById("form_price").value;
   let stockProd = document.querySelector("#form_stock").value;
-  let imgProducto = "../ASSETS/FOTOS_CATALOGO/placeholder.png";
+  let imgProducto = "../assets/fotos_catalogo/placeholder.png";
   let descriProd = document.getElementById("form_description").value;
   piezasEnstock.push(
     new PiezasOfrecidas(
@@ -26,7 +26,7 @@ function cargarProducto() {
   );
   let str = JSON.stringify(piezasEnstock);
   localStorage.setItem("stockDisponible", str);
-  alert("Producto Agregado!")
+  alert("Producto Agregado!");
 }
 
 botonBorrar.addEventListener("click", () => {
@@ -61,7 +61,7 @@ function borrarItems() {
         gravity: "bottom",
         position: "right",
         style: {
-        background:
+          background:
             "radial-gradient(circle, rgba(255,183,16,0.34294269465598737) 0%, rgba(255,183,16,0.9143712660845589) 100%)",
         },
       }).showToast();
